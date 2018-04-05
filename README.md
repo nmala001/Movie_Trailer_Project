@@ -18,7 +18,7 @@ You also need to know how to use git clone and pip install.
 
 command to run: $ git clone https://github.com/nmala001/ud036_StarterCode.git
 
--Move into the root
+- Move into the root
 
 Command to run: $ cd ud036_StarterCode
 
