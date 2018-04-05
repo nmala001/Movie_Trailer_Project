@@ -22,7 +22,7 @@ command to run: $ git clone https://github.com/nmala001/ud036_StarterCode.git
 
 Command to run: $ cd ud036_StarterCode
 
-- Be sure you have these packages installed if planning to use Movie.get_movie_data:
+- Make sure you have these packages installed if planning to use Movie.get_movie_data:
 
 Command to run: pip install --upgrade requests google-api-python-client
 
