@@ -12,6 +12,20 @@ class Movie:
 
     def __init__(self, title, plot, trailer_youtube_url, poster_image_url, movie_data=None):
 
+        """This is a constructor for movie class
+
+           Movie instance attributes are set
+
+           Args:
+               title(str): The movie title.
+               plot(str): The movie plot
+               trailer_youtube_url(str): URL corresponding to the youtube video of the movie
+               image_url(str): A URL corresponding to an image of the movie poster.
+               movie_data(dict or None): Additional movie information
+
+
+        """
+
         self.title = title
         self.plot = plot
         self.trailer_youtube_url = trailer_youtube_url
@@ -34,6 +48,17 @@ class Movie:
 
     def movie(movie_title, year=None):
 
+        """This creates a Movie instance using 'get_movie_data' to get the movie information needed
+
+        Args:
+            movie_title(str): The movie title
+            year(str or None): MOvie release year
+
+        Returns:
+            Movie: A new 'movie' instance
+
+        """
+
         movie_data = Movie.get_movie_data(movie_title, year)
 
         title = movie_title
@@ -47,6 +72,19 @@ class Movie:
 
     # The data is fetched using Youtube API and OMDB API
     def get_movie_data(movie_title, year=None, *queries):
+
+        """
+             - We use the functions from movie_search.py
+             - This static function returns a dictionary of the data
+
+            Args:
+                movie_title(str): The movie title
+                year(str or None): The movie release year
+                *queries(str): Any additional query terms
+            Returns:
+                dict: A dictionary of movie info
+
+        """
 
         movie_info = movie_search.omdb_movie_info(movie_title, year)
         video_id = movie_search.youtube_video_id(movie_title, year, *queries)
