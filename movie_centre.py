@@ -18,6 +18,7 @@ MAD_MAX = Movie.movie('Mad Max', '2015')
 Rangasthalam = Movie.movie('Rangasthalam')
 Teen_Titans_Go = Movie.movie('Teen_Titans_Go')
 
-movies = [A_Star_Is_Born, INCEPTION, PRIMER, SNATCH, MAD_MAX, BLADE_RUNNER, BRICK, Rangasthalam, Avatar, BatMan, Teen_Titans_Go]
+movies = [A_Star_Is_Born, INCEPTION, PRIMER, SNATCH, MAD_MAX, BLADE_RUNNER,
+          BRICK, Rangasthalam, Avatar, BatMan, Teen_Titans_Go]
 
 open_movies_page(movies)  # Generate HTML and open in browser
