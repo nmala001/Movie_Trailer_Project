@@ -4,13 +4,17 @@ import movie_search
 Youtube_URL = 'https://www.youtube.com/watch?v={}'
 
 # A class is used for encapsulating the movie info
-# Movie instances are created that are used by fresh_tomatoes.py to render the website's HTML
+# Movie instances are created that are used by
+# fresh_tomatoes.py to render the website's HTML
+
 
 class Movie:
-    
-    # A constructor for the 'Movie' class has been created and also instance for the Movie attributes are set.
 
-    def __init__(self, title, plot, trailer_youtube_url, poster_image_url, movie_data=None):
+    # A constructor for the 'Movie' class has been
+    # created and also instance for the Movie attributes are set.
+
+    def __init__(self, title, plot, trailer_youtube_url,
+                 poster_image_url, movie_data=None):
 
         """This is a constructor for movie class
 
@@ -19,10 +23,11 @@ class Movie:
            Args:
                title(str): The movie title.
                plot(str): The movie plot
-               trailer_youtube_url(str): URL corresponding to the youtube video of the movie
-               image_url(str): A URL corresponding to an image of the movie poster.
+               trailer_youtube_url(str): URL corresponding
+               to the youtube video of the movie
+               image_url(str): A URL corresponding to an
+               image of the movie poster.
                movie_data(dict or None): Additional movie information
-
 
         """
 
@@ -31,7 +36,7 @@ class Movie:
         self.trailer_youtube_url = trailer_youtube_url
         self.poster_image_url = poster_image_url
         self.movie_data = movie_data
-    
+
     def show_trailer(self):
 
         # Opens youtube trailer in the web browser
@@ -43,12 +48,12 @@ class Movie:
         # Opens the poster image url in the web browser
 
         webbrowser.open(self.poster_image_url)
-    
-    @staticmethod
 
+    @staticmethod
     def movie(movie_title, year=None):
 
-        """This creates a Movie instance using 'get_movie_data' to get the movie information needed
+        """This creates a Movie instance using
+        'get_movie_data' to get the movie information needed
 
         Args:
             movie_title(str): The movie title
@@ -66,10 +71,10 @@ class Movie:
         trailer_youtube_url = movie_data['youtube_url']
         poster_image_url = movie_data['poster']
 
-        return Movie(title, plot, trailer_youtube_url, poster_image_url, movie_data)
-    
-    @staticmethod
+        return Movie(title, plot, trailer_youtube_url,
+                     poster_image_url, movie_data)
 
+    @staticmethod
     # The data is fetched using Youtube API and OMDB API
     def get_movie_data(movie_title, year=None, *queries):
 
@@ -88,7 +93,7 @@ class Movie:
 
         movie_info = movie_search.omdb_movie_info(movie_title, year)
         video_id = movie_search.youtube_video_id(movie_title, year, *queries)
-        
+
         # Adding the Youtube data to the dictionary
         data = movie_info
 
@@ -96,13 +101,3 @@ class Movie:
         data['youtube_url'] = Youtube_URL.format(video_id)
 
         return data
-
-
-
-
-
-
-
-
-
-
