@@ -25,7 +25,7 @@ MAD_MAX = Movie(MAD_MAX_DATA['title'],
                 MAD_MAX_DATA['plot'],
                 MAD_MAX_DATA['youtube_url'],
                 MAD_MAX_DATA['poster'],
-                MAD_MAX_DATA) # Passing the dict for "info" attribute
+                MAD_MAX_DATA)  # Passing the dict for "info" attribute
 
 print(MAD_MAX.title)
 
@@ -46,6 +46,3 @@ print(BLADE_RUNNER.plot)
 for key in BLADE_RUNNER.info:
     entry = '{0:>15} -- {1}'.format(key, BLADE_RUNNER.info[key])
     print(entry)
-
-
-
