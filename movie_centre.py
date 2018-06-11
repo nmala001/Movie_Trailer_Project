@@ -6,7 +6,6 @@ from fresh_tomatoes import open_movies_page
 movie_search.YOUTUBE_API_KEY = config.YOUTUBE_API_KEY
 movie_search.OMDB_API_KEY = config.OMDB_API_KEY
 
-A_Star_Is_Born = Movie.movie('A_Star_Is_Born', '2018')
 BatMan = Movie.movie('BatMan')
 INCEPTION = Movie.movie('Inception')
 BLADE_RUNNER = Movie.movie('Blade Runner', '1982')
@@ -18,7 +17,7 @@ MAD_MAX = Movie.movie('Mad Max', '2015')
 Rangasthalam = Movie.movie('Rangasthalam')
 Teen_Titans_Go = Movie.movie('Teen_Titans_Go')
 
-movies = [A_Star_Is_Born, INCEPTION, PRIMER, SNATCH, MAD_MAX, BLADE_RUNNER,
+movies = [INCEPTION, PRIMER, SNATCH, MAD_MAX, BLADE_RUNNER,
           BRICK, Rangasthalam, Avatar, BatMan, Teen_Titans_Go]
 
 open_movies_page(movies)  # Generate HTML and open in browser
