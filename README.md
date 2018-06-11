@@ -14,13 +14,13 @@ Note: In order to perform the following steps, you need to have Python 2.7, git 
 
 You also need to know how to use git clone and pip install.
 
-- Open a shell and clone https://github.com/nmala001/ud036_StarterCode.git
+- Open a shell and clone https://github.com/nmala001/Movie_Trailer_Project.git
 
-command to run: $ git clone https://github.com/nmala001/ud036_StarterCode.git
+command to run: $ git clone https://github.com/nmala001/Movie_Trailer_Project.git
 
 - Move into the root
 
-Command to run: $ cd ud036_StarterCode
+Command to run: $ cd Movie_Trailer_Project
 
 - Make sure you have these packages installed if planning to use Movie.get_movie_data:
 
